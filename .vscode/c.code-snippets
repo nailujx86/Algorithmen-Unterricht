@@ -1,0 +1,19 @@
+{
+	"Include common headers": {
+		"prefix": "include",
+		"body": [
+			"#include <stdio.h>",
+			"#include <stdlib.h>",
+			"#include <string.h>",
+			"#include <math.h>"
+		],
+		"description": "Include common headers"
+	},
+	"Boilerplate": {
+		"prefix": "boilerplate",
+		"body": [
+			"#include <stdio.h>\r\n#include <stdlib.h>\r\n\r\nint main(int argc, char *argv[]) {\r\n    FILE *in = stdin;\r\n\r\n    if (argc > 2) {\r\n        fprintf(stderr, \"Usage: %s [<file>]\\n\", argv[0]);\r\n        exit(EXIT_FAILURE);\r\n    }\r\n    if (argc == 2) {\r\n        in = fopen(argv[1], \"r\");\r\n        if (!in) {\r\n            perror(argv[0]);\r\n            exit(EXIT_FAILURE);\r\n        }\r\n    }\r\n    /* Here: Read from in with (e.g.) fgets(), ... */\r\n    if (in != stdin) {\r\n        fclose(in);\r\n    }\r\n    exit(EXIT_SUCCESS);\r\n}"
+		],
+		"description": "Add boilerplate code"
+	}
+}
