@@ -1,6 +1,9 @@
 {
-	//"C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 4 }",
+	"C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 4 }",
     "files.exclude": {
         "**/*.exe": true
+    },
+    "files.associations": {
+        "stdio.h": "c"
     }
 }
